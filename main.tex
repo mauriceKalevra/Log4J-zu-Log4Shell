@@ -63,7 +63,7 @@
 \begin{frame}{Was ist Log4Shell?}
 \begin{itemize}
 \item Zero-Day Sicherheitslücke in der Log4J Biblothek
-\item Erster Report Ende November 2021 durch Mitarbeiter bei Alibaba 
+\item Erster Report Ende November 2021 durch Mitarbeiter von Alibaba 
 \item Veröffentlichung am 10. Dezember 2021 unter CVE-2021-44228
 \item Ermöglicht Arbitary Code Execution\\
 $\Rightarrow$ Remote Code Exection, Reverse Shell etc.
@@ -82,19 +82,57 @@ $\Rightarrow$ Remote Code Exection, Reverse Shell etc.
  \begin{itemize}
   \item Über 3 Milliarden Geräte potenziell Betroffen
   \item Gilt als größte Sicherheitslücke seit Shellshock
-  \item Nach wie vor im Umlauf
-  \item Mehrere Großte It Infrastrukuren betroffen
+  \item Viele Große It-Infrastrukuren betroffen\\
+  - Apple, Steam, Twitter, Amazon, Cloudflare, Tesla etc.
+  \item Nach wie vor Aktuell
   
   
  \end{itemize}
 
 \end{frame}
 
-
+\section{Funktionsweiße}
+\subsection{Log4J}
 \begin{frame}{Funktionsweiße}
- 
+\begin{itemize}
+ \item Große Anzahl an Konfigurationsmöglichkeiten\\
+$\Rightarrow$ log4j.xml
+\item Meist jedoch für einfaches Logging verwendet
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.45]{log4jexample.png}
+\end{center}
+\end{frame}
+\begin{frame}
+ \begin{block}{Lookups}
+  Bietet die Möglichkeit Umgebungsvariablen auszulesen.\\
+  - zB. Datum, Betriebssystem, Verzeichniss etc.
+ \end{block}
+ \begin{center}
+ \includegraphics[scale=0.45]{lookupsexample.png}
+ \end{center}
+ \begin{itemize}
+  \item  Über 50 verschiedene Lookups möglich
+  \item  Darunter Jindi
+ \end{itemize}
+
+
+ \end{frame}
+
+\subsection{Jindi}
+\begin{frame}{Jindi}
+$\Rightarrow$ `Java Naming and Directory Interface`
+\begin{itemize}
+ \item Web-API für Datenbankabfragen
+ \item Jindi darf mit anderen Servern Kommunizieren\\
+ $\Rightarrow$ logger.info("\$\{jndi: Server-IP\}")
+\end{itemize}
+
 \end{frame}
 
+\subsection{Ldap}
+
+\subsection{Log4shell}
 
 
 
