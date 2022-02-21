@@ -1,0 +1,24 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Was ist Log4J und Log4Shell?}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Trivia}{5}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Funktionsweise}{6}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{1}{Log4J}{6}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{2}{Jindi}{8}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{3}{Ldap}{9}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Log4Shell}{10}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {4}{1}{Funktionsweise Log4Shell}{11}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Proof of Concept}{13}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Lösungsansätze}{14}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Fazit und Ausblick}{16}{0}{7}

